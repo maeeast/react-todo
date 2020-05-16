@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2342087d3a58611084fad3336e26a623",
+    "revision": "908b484fcff3ce51f3f1db52f3b28ffb",
     "url": "/react-todo/index.html"
   },
   {
