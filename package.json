@@ -36,5 +36,5 @@
   "devDependencies": {
     "gh-pages": "^2.2.0"
   },
-  "homepage": "https://maeeast.github.io/react-todo"
+  "homepage": "http://maeeast.github.io/react-todo"
 }
