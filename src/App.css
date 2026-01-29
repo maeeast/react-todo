@@ -1,23 +1,32 @@
 body {
-  font-family: 'Nanum Pen Script', cursive;
+  font-family: "Nanum Pen Script", cursive;
+  margin: 0;
+  background: #f6f7fb;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 24px 16px;
 }
 
 .notepad {
-  position:relative;
+  position: relative;
   background-color: #fefefe;
-  width: 600px;
+  width: min(600px, calc(100vw - 32px));
   margin: 0 auto;
   padding: 0;
-  min-height:495px;
+  min-height: 495px;
   border: 1px solid #dcdcdc;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  overflow: hidden;
 }
 
 .lines {
   border-left: 1px solid #ffaa9f;
   border-right: 1px solid #ffaa9f;
   width: 2px;
-  float: left;
   height: 100%;
   min-height: 495px;
   margin-left: 40px;
@@ -28,12 +37,11 @@ body {
 
 .header {
   position: relative;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: auto;
-  padding: 10px 0;
+  padding: 10px 0 6px;
 }
 
 .header h1 {
@@ -43,36 +51,50 @@ body {
 
 .todo-input {
   width: 100%;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
+  gap: 12px;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
+
 .input-box {
+  flex: 1;
+  max-width: 400px;
   padding: 6px 12px;
   color: #495057;
   background-color: #fff;
-  background-clip: padding-box;
   border: 1px solid #ced4da;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 }
 
 .submit-btn {
   color: #58ccfa;
   background-color: #fff;
   font-weight: 700;
-  font-size: .8em;
+  font-size: 0.8em;
   text-transform: uppercase;
-  border: 1px solid #5FC9F3;
+  border: 1px solid #5fc9f3;
   border-radius: 4px;
   cursor: pointer;
   padding: 6px 12px;
-  margin-left: 20px;
 }
 
-.submit-btn:hover {
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.submit-btn:hover:not(:disabled) {
   color: #fefefe;
   background-color: #58ccfa;
   border-color: #5fc9f3;
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
+}
+
+.empty-state {
+  padding: 18px 20px 18px 50px;
+  color: #6c757d;
+  font-size: 1.2em;
 }
